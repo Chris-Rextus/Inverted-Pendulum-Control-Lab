@@ -199,16 +199,7 @@ export default function App() {
       </main>
 
       {showPZ && <PoleZeroDesigner onApply={({ den }) => applyLinear(den)} onClose={() => setShowPZ(false)} />}
-      {showRL && (
-        <RootLocus
-          ctrlType={['P','I','PI','PD','PID'].includes(design.family) ? design.family : 'PD'}
-          gains={design.params}
-          plant={{ num: [1 / (mass * length * length)], den: [1, damping / (mass * length * length), -gravity / length] }}
-          onGainChange={(k, v) => setParam(k, v)}
-          onApply={(den) => applyLinear(den)}
-          onClose={() => setShowRL(false)}
-        />
-      )}
+      {showRL && <RootLocus ctrlType={['P','I','PI','PD','PID'].includes(design.family) ? design.family : 'PD'} gains={design.params} onApply={(den) => applyLinear(den)} onClose={() => setShowRL(false)} />}
       {showCD && <ControllerDesigner currentDesign={design} onRunLive={runLive} onSendPoles={(den) => applyLinear(den)} onClose={() => setShowCD(false)} />}
     </div>
   );

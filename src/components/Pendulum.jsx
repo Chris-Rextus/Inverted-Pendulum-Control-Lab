@@ -43,7 +43,8 @@ export default function Pendulum({
     if (!linearDen || linearDen.length < 2) { xRef.current = null; return; }
     const n = linearDen.length - 1;
     const x = new Array(n).fill(0);
-    x[0] = (initialAngle * Math.PI) / 180; // θ₀ displacement
+    const a0 = (initialAngle * Math.PI) / 180;
+    x[0] = Math.abs(a0) > 1e-4 ? a0 : 0.15; 
     xRef.current = x;
   };
 

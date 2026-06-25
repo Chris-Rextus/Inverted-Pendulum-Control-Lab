@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* surfaces */
+  --bg-app: #020617;          /* slate-950 */
+  --bg-panel: #0f172a99;      /* slate-900/60 */
+  --bg-canvas: #0b1220;
+  --bg-canvas-danger: #180f14;
+  --border: #1e293b;          /* slate-800 */
+  --border-strong: #334155;   /* slate-700 */
+
+  /* text */
+  --text: #f1f5f9;            /* slate-100 */
+  --text-muted: #94a3b8;      /* slate-400 */
+  --text-faint: #64748b;      /* slate-500 */
+
+  /* accents */
+  --accent: #fbbf24;          /* amber-400 — primary/highlight */
+  --accent-strong: #f59e0b;   /* amber-500 — buttons */
+  --info: #22d3ee;            /* cyan-400 — section labels */
+  --ok: #34d399;             /* emerald — stable */
+  --bad: #f87171;            /* red — unstable */
+  --pole: #f87171;
+  --zero: #60a5fa;
+  --rod: #e2e8f0;
+  --bob: #38bdf8;
+}
